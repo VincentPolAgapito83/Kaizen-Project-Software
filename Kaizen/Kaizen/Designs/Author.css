@@ -1,0 +1,92 @@
+* {
+    font-family: 'Arial Narrow';
+    margin: 0;
+    background: green;
+}
+
+.topnav{
+    background-color: green;
+    overflow: hidden;
+}
+
+.topnav h1 {
+    font-size: 40px;
+    font-style: bold;
+}
+
+.topnav p{
+    font-size: 25px;
+}
+
+.topnav a {
+    float: left;
+    font-family: 'Arial Narrow';
+    font-size: 20px;
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+.topnav a:hover {
+    background-color: green;
+    color: black;
+}
+
+
+.column {
+    float: left;
+    width: 50%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-size: 20px;
+    font-style: bold;
+}
+
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: black;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    color: black;
+    background-color: #fff8f8;
+    text-align: center;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover{
+    background-color: #006400;
+}
+
+
+@media screen and (max-width: 650px) {
+    .column  {
+        width: 100%;
+        display: block;
+    }
+    
+}
