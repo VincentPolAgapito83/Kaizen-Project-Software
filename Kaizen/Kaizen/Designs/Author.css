@@ -1,11 +1,11 @@
 * {
     font-family: 'Arial Narrow';
     margin: 0;
-    background: green;
+    background: blue;
 }
 
 .topnav{
-    background-color: green;
+    background-color: blue;
     overflow: hidden;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .topnav a:hover {
-    background-color: green;
+    background-color: blue;
     color: black;
 }
 

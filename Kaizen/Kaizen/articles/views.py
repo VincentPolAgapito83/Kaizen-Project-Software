@@ -18,3 +18,8 @@ def Logout(request):
     # return HttpResponse('Homepage')
     return render(request, 'Homepage.html')
 
+def article_details(request, slug):  
+    return HttpResponse(slug)
+    
+
+

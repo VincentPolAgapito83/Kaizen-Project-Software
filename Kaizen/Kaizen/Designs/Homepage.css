@@ -3,11 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial Narrow';
-    background: green;
+    background: blue;
 }
 
 .topnav {
-    background-color: green;
+    background-color: blue;
     overflow: hidden;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .topnav a:hover {
-    background-color: green;
+    background-color: blue;
     color: black;
 }
 
