@@ -17,9 +17,9 @@ def Registration(request):
     # return HttpResponse('Sign-up')
     return render(request, 'Registration.html')
 
-def authors(request):  
-    # return HttpResponse('List Of Authors')
-    return render(request, 'articles/authors_list.html')
+def article_list(request):  
+    # return HttpResponse('Article list')
+    return render(request, 'articles/article_list.html')
 
 def article_details(request):  
     # return HttpResponse('List Of Authors')

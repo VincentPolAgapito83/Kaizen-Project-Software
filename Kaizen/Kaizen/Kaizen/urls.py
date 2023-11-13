@@ -9,6 +9,5 @@ urlpatterns = [
     path('Login/', views.Login),
     path('Registration', views.Registration),
     path('articles/', include('articles.urls')),
-    path('articles/', views.article_details),
     path('', views.Homepage)
 ]

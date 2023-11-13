@@ -37,7 +37,7 @@
 }
 
 .container{
-    width: 100%;
+    width: 105%;
     min-height: 50vh;
     padding: 5%;
     display: flex;
@@ -65,23 +65,24 @@ input {
 }
 
 button{
-    border: 0;
-    border-radius: 5px;
-    width: 5px;
-    height: 5px;
-    padding: 40px 50px;
-    text-align: center;
+    font-family: 'Arial Narrow';
     background-color: white;
+    color: black;
+    padding: 25px 20px;
+    margin: 100%;
     cursor: pointer;
-    font-size: 25px;
-    text-align: middle;
+    opacity: 1;
+    width: 10%;
+    border-radius: 0%;
 }
 
 button:hover {
-    background-color: #006400;
+    background-color: gray;
     color: black;
-
+    opacity: 1;
 }
+
+
 
 
 

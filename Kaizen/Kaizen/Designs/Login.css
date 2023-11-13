@@ -17,6 +17,7 @@ body{
 
 input[type=text],
 input[type=password]{
+    font-family: 'Arial Narrow';
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -24,6 +25,7 @@ input[type=password]{
     border: 1px solid white;
     box-sizing: border-box;
 }
+
 button{
     background-color: gray;
     color: white;
@@ -39,6 +41,7 @@ button:hover{
 }
 
 .imgcontainer{
+    font-family: 'Arial Narrow';
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
@@ -70,10 +73,12 @@ img{
 }
 
 .container{
+    font-family: 'Arial Narrow';
     padding: 16px;
 }
 
 span.psw{
     float: right;
     padding-top: 16px;
+    font-family: 'Arial Narrow';
 }
