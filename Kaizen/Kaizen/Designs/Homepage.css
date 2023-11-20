@@ -47,17 +47,18 @@
 }
 
 input {
+    list-style: none;
     width: 100%;
     max-width: 700%%;
     background-color: #fff;
     display: flex;
     margin-top: 0em;
     align-items: center;
-    border-radius: 50px;
+    border-radius: 100px;
     padding: 30px 50px;
     font-size: 20px;
+    border-top: 1px, solid;
 }
-
 
 
 ::placeholder {
@@ -82,6 +83,14 @@ button:hover {
     opacity: 1;
 }
 
+option{
+    border-radius: 100px;
+    padding: 30px 50px;
+    display: table;
+    position: relative;
+    margin: 30px auto;
+
+}
 
 
 
