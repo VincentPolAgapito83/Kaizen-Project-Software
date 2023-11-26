@@ -8,9 +8,8 @@
     </head>
     <body>
         <div class="wrapper">
-            <h1><a href="#">{{article.title}}</a></h1>
+            <h1><a href="{% url 'articles:list' %}">Articles</a></h1>
             {% block content %}
             {% endblock %}
-        </div>
     </body>
 </html>
