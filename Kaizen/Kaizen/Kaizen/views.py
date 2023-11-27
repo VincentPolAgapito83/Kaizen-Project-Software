@@ -1,5 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 def Homepage(request):
     # return HttpResponse('Welcome To Kaizen Website')
@@ -10,10 +11,26 @@ def About(request):
     return render(request, 'About.html')
 
 def Login(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # log in the user
+            return redirect('articles:list')
+    else:
+        form = AuthenticationForm()
     # return HttpResponse('Login')
-    return render(request, 'Login.html')
+    return render(request, 'Login.html', {'form':form})
 
 def Registration(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # log the user in
+            return redirect('articles:list')
+    else:
+        form = UserCreationForm()
     # return HttpResponse('Sign-up')
     return render(request, 'Registration.html')
 

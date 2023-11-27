@@ -2,16 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Article(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=200)
     slug = models.SlugField()
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+    File = models.FileField(default='default.pdf', blank=True)
     #author = models.ForeignKey(author)
-
-
-class UploadedFile(models.Model):
-    file = models.FileField(upload_to='uploads/')
-    uploaded_at = models.DateTimeField(auto_now_add=True)
 
 
 
