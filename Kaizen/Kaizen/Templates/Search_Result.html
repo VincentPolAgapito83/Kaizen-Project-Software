@@ -1,0 +1,23 @@
+{% extends 'Base_Layout.html' %}
+
+{% block content %}
+
+<form method="get" action="{% url 'kaizen:url-name' %}">
+    {% csrf_token %}
+    <div class="test-outer">
+        <div class="test-inner">
+            <select class="custom-select" name="Article_topic">
+                {% for article in Articles %}
+            {% if Research_topic == Chosen Article %}
+            <option selected="selected" value="{{article.topic}}">{{ Article.topic}} - {{ Faculty.Member}}</option>
+            {% else %}
+            <option value="{{ Article.topic }}">{{ Article.topic}} - {{ Faculty.Member}}</option>
+            {% endif %}
+            {% endfor %}
+            </select>
+        </div>
+        <div class="test-inner">
+            <button type="submit" class="btn btn-primary mb-3">View Faculty Member/Article Topic</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,40 @@
+{% extends 'Base_Layout.html' %}
+
+
+{% block content %}
+     
+     <h2 class="text center" style="margin-left: 20px;"> Search Results: </h5>
+
+        <hr>
+
+        <div class="container">
+
+            <div class="row justify-content-center m-4">
+
+                {% if articles %}
+
+                   {% for article in articles %}
+
+                   <div class="col-md-4">
+                    <div class="card m-3 p-2" style="width: 20rem; height: 30rem; box-shadow: 4px 4px #0723f7; border-radius: 25px 15px;">
+                        <div class="card-body">
+                            <h4 class="card-title mt-1">{{article.title}}</h4>
+                            <h3 style="color: rgb(7,35,247)" class="card-subtitle mt-1">{{article.author}}</h3>
+                            <hr>
+                            <p class="cart-text mt-1">{{article.date}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            {% else %}
+                  <p>Article Not Found 404</p>
+            {% endif %}
+            </div>
+
+        </div>
+
+
+
+{% endblock %}

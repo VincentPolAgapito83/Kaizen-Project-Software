@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.conf import settings
+
+User = settings.AUTH_USER_MODEL
 
 class Article(models.Model):
     title = models.CharField(max_length=200)
@@ -7,8 +10,8 @@ class Article(models.Model):
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     File = models.FileField(default='default.pdf', blank=True)
+    author = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE, default=None)
     #author = models.ForeignKey(author)
-
 
 
     def __str__(self):
