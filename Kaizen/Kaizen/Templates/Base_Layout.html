@@ -9,7 +9,9 @@
     <body>
         <div class="wrapper">
             <h1><a href="#">{{article.title}}</a></h1>
+            {% include 'Navbar.html' %}
             {% block content %}
+            
             {% endblock %}
         </div>
     </body>
