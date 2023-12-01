@@ -1,3 +1,20 @@
+
+{% if query %}
+<div>
+    <div>
+        {% if articles %}
+            {% for articles in articles %}
+            <div>
+                <p>{{post.articles}}</p>
+            </div>
+            {% endfor %}
+        {% else %}
+           <h3>No Search Results Found</h3>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+     <h1>Please Enter Search Query</h1>
 <h1>Search Results</h1>
 
 <ul>
