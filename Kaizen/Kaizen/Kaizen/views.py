@@ -7,10 +7,10 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 
 
-@login_required(login_url='Templates/login')
 def Homepage(request):
     # return HttpResponse('Welcome To Kaizen Website')
     return render(request, 'Homepage.html')
+
 
 def About(request):
     # return HttpResponse('About Us')
@@ -63,7 +63,7 @@ def Logout(request):
         auth.logout(request)
         print('You Are Logged out from this website..')
         return redirect('Login')
-    
+  
 def index(request):
     article_list = article_list.objects.all()
     p = Paginator(article_list, 20)
@@ -75,12 +75,12 @@ def index(request):
     context = {'articles': page}
     return render(request, 'index.html', context)
 
+@login_required(login_url='Templates/login')
 def SearchResults(request):
-
     category = request.GET.get('category')
 
     if category == None:
-        articles = Article.objects.order_by('title').filter(is_published=True)
+        articles = articles.objects.order_by('title').filter(is_published=True)
         page_num = request.GET.get("page")
         paginator = Paginator(articles, 2)
         try:
@@ -90,7 +90,7 @@ def SearchResults(request):
         except EmptyPage:
             articles = paginator.page(paginator.num_pages)
     else:
-        articles = Article.objects.filter(article_title=article)
+        articles = articles.objects.filter(article_title=articles)
 
     articles = articles.objects.all()
 

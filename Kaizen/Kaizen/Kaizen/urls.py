@@ -15,7 +15,8 @@ urlpatterns = [
     path('Search_result', views.SearchResults, name="SearchResults"),
     path('Registration/', views.Registration, name="Registration"),
     path('articles/', include('articles.urls')),
-    path('', views.Homepage)
+    path('members/', include('members.urls')),
+    path('', views.Homepage),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
