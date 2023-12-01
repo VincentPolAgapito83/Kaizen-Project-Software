@@ -5,6 +5,17 @@ from django.http import HttpResponse
 from datetime import datetime
 from django.contrib import auth
 from django.contrib.auth.models import User
+from django.db.models import Q
+
+
+
+class SearchResultsView(ListView):
+    model = articles 
+    template_name = "Search_Results.html"
+
+    def get_queryset(self):
+        Q(name__icontains='Engineer Ma.Cecilia A.Venal') | Q(Article__icontains='Deep Learning')
+    
 
 
 def Homepage(request):
@@ -75,7 +86,6 @@ def index(request):
     context = {'articles': page}
     return render(request, 'index.html', context)
 
-@login_required(login_url='Templates/login')
 def SearchResults(request):
     category = request.GET.get('category')
 
