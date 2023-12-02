@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
@@ -7,21 +7,9 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from django.db.models import Q
 
-
-
-class SearchResultsView(ListView):
-    model = articles 
-    template_name = "Search_Results.html"
-
-    def get_queryset(self):
-        Q(name__icontains='Engineer Ma.Cecilia A.Venal') | Q(Article__icontains='Deep Learning')
-    
-
-
 def Homepage(request):
     # return HttpResponse('Welcome To Kaizen Website')
     return render(request, 'Homepage.html')
-
 
 def About(request):
     # return HttpResponse('About Us')
