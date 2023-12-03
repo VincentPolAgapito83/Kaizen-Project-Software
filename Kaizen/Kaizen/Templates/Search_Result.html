@@ -1,26 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <title>Welcome to Kaizen Website</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 
-{% if query %}
-<div>
-    <div>
-        {% if articles %}
-            {% for articles in articles %}
-            <div>
-                <p>{{post.articles}}</p>
-            </div>
-            {% endfor %}
-        {% else %}
-           <h3>No Search Results Found</h3>
-        {% endfor %}
-    </div>
-</div>
-{% else %}
-     <h1>Please Enter Search Query</h1>
-<h1>Search Results</h1>
-
-<ul>
-    {% for author in Author %}
-    <li>
-        {{Author/Faculty Member name}}, {{Article.topic}}
-    </li>
-    {% endfor %}
-</ul>
+    </head>
+    <body>
+        <div class="container text-white">
+            <form action=" " method="get">
+                {% csrf_token %}
+                <input type="text" name="q" placeholder="Search Author">
+                <button type="submit" name="button"></button>
+            </form>
+            <h1>Search Results are:</h1>
+            {% for Article in articles %}
+        </div>
+    </body>
+</html>

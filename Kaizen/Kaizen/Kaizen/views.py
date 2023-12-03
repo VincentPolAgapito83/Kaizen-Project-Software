@@ -3,9 +3,24 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from datetime import datetime
+from scholarly import scholarly
+from django.views.generic  import ListView, DetailView
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.db.models import Q
+
+
+class PostIndexView(ListView):
+    model = article
+    template_name = 'Search_Result.html'
+    queryset = article.objects.all()
+    context_object_name = 'posts'
+
+class PostDetailView(DetailView):
+    model = article  
+    context_object_name = 'post'
+    template_name = 'Search_details.html'
+
 
 def Homepage(request):
     # return HttpResponse('Welcome To Kaizen Website')
